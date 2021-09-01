@@ -1,0 +1,78 @@
+.disappear-bg{
+    animation: disappear 1.5s ease-in-out forwards;
+}
+.disappear-logo{
+    animation: disappear .8s ease-in-out forwards;
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes loadingOl {
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes loadingOr {
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+.loading{
+    .loading-bg{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100000;
+    }
+    .loading-logo{
+        width: 230px;
+        position: fixed;
+        top: 42%;
+        left: 50%;
+        @extend %translate;
+        z-index: 100001;
+        #loading-lookin{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: appear 2.5s 1;
+        }
+        #loading-ol{
+            width: 50px;
+            position: absolute;
+            top: 17px;
+            left: 36px;
+            animation: appear 2.5s 1,loadingOl 1s infinite;
+        }
+        #loading-or{
+            width: 50px;
+            position: absolute;
+            top: 0;
+            left: 84px;
+            animation: appear 2.5s 1,loadingOr 1s infinite;
+        }
+    }
+}

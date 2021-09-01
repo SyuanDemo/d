@@ -1,0 +1,130 @@
+//變數
+$bgC: rgba(113, 101, 206, 0.5);
+$textC: #ffffff;
+$svgC: #7265ce;
+$sideC: #ffffff;
+$sideBgc: #7265ce;
+
+footer{
+    width: 100%;
+    background-color: $bgC;
+    margin: 10px auto 0;
+    text-align: center;
+    padding: 15px 0;
+    @include pad{
+        padding: 30px 0;
+    }
+    @include pcL{
+        margin-top: 50px;
+    }
+    .wrap{
+        width: 95%;
+        .source{
+            color: $textC;
+            font-size: 12px;
+            margin-bottom: 10px;
+            @include pad{
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+        }
+        .ft-icon{
+            width: 12vw;
+            max-width: 50px;
+            display: inline-block;
+            border: 2px solid $textC;
+            border-radius: 15px;
+            margin: 2vw;
+            @include pad{
+                margin: 10px;
+            }
+            svg{
+                width: 100%;
+                .ft-svg{
+                    fill: $textC;
+                }
+            }
+        }
+        .privacy{
+            margin-top: 10px;
+            line-height: 1rem;
+            color: $textC;
+            font-size: 12px;
+            @include pad{
+                font-size: 13px;
+                margin-top: 15px;
+                line-height: 1.2rem;
+            }
+            a{
+                color: $textC;
+            }
+        }
+    }
+}
+
+.share-btn{
+    line-height: 1.1em;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    display: none;
+    z-index: 2000;
+    cursor: pointer;
+    position: fixed;
+    background-color: $sideBgc;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px #00000071;
+    opacity: .8;
+    @include pcS{
+        opacity: .6;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    svg{
+        width: 90%;
+        padding-top: 5%;
+        padding-left: 5%;
+        .side-icon{
+            fill: $sideC;
+        }
+    }
+    @include pad{
+        width: 55px;
+        height: 55px;
+    }
+}
+#return-to-top {
+    bottom: 20px;
+    right: 5px;
+    @include pad{
+        bottom: 30px;
+        right: 10px;
+    }
+    @include pcS{
+        right: 15px;
+    }
+}
+.icon-facebook {
+    bottom: 65px;
+    right: 5px;
+    @include pad{
+        bottom: 95px;
+        right: 10px;
+    }
+    @include pcS{
+        right: 15px;
+    }
+}
+
+.icon-line {
+    bottom: 110px;
+    right: 5px;
+    @include pad{
+        bottom: 160px;
+        right: 10px;
+    }
+    @include pcS{
+        right: 15px;
+    }
+}
